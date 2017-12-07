@@ -5,9 +5,6 @@
   <artifactId>rocksaw</artifactId>
   <version>1.1.0</version>
 
-  <name>RockSaw Raw Socket Library</name>
-  <description>RockSaw is a simple API for performing network I/O with IPv4 and IPv6 raw sockets in Java</description>
-  <url>https://github.com/mlaccetti/rocksaw</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

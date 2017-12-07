@@ -4,23 +4,21 @@
 # Runs a super-tiny container with Java/Maven/gcc for building/testing RockSaw.
 #
 # Building the container:
-# $ docker build -t mlaccetti/rocksaw-dev .
+# $ docker build -t tasks-delivery/network .
 #
 # Interactive usage:
-# $ docker run -v $(pwd):/opt/rocksaw -it --rm mlaccetti/rocksaw-dev /bin/bash
+# $ docker run -v $(pwd):/opt/rocksaw -it --rm tasks-delivery/network /bin/bash
 #
 # If you want to cache Maven dependencies between runs, you can change the run command:
-# $ docker run -v $(pwd):/opt/rocksaw -v ~/.m2:/root/.m2 -it --rm mlaccetti/rocksaw-dev /bin/bash
+# $ docker run -v $(pwd):/opt/rocksaw -v ~/.m2:/root/.m2 -it --rm tasks-delivery/network /bin/bash
 #
 # Automated build usage:
-# $ docker run -v $(pwd):/opt/rocksaw --rm mlaccetti/rocksaw-dev
+# $ docker run -v $(pwd):/opt/rocksaw --rm tasks-delivery/network
 #
 # Automated build usage with Maven cache:
-# $ docker run -v $(pwd):/opt/rocksaw -v ~/.m2:/root/.m2 --rm mlaccetti/rocksaw-dev
+# $ docker run -v $(pwd):/opt/rocksaw -v ~/.m2:/root/.m2 --rm tasks-delivery/network
 
 FROM anapsix/alpine-java:jdk8
-
-MAINTAINER Michael Laccetti "michael@laccetti.com"
 
 ENV MAVEN_HOME="/opt/maven"
 ENV MAVEN_VERSION="3.3.9"
